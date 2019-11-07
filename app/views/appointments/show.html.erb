@@ -1,0 +1,15 @@
+<h1><%=@patient.name%>'s Appointment</h1>
+
+<h2>Patient:</h2>
+<%=link_to @patient.name, @patient%>
+<br>
+
+<h2>Doctor:</h2>
+<%=link_to @doctor.name, @doctor%>
+<br>
+
+<h2>Date:</h2>
+<%=@date%>
+
+<h2>Time:</h2>
+<%=@time%>
