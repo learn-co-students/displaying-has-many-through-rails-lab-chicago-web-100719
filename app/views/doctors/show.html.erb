@@ -1,0 +1,22 @@
+<h1><%=@doctor.name%></h1>
+<br>
+<h2>Department:</h2>
+<p><%=@doctor.department%></p>
+<br>
+<h2>Appointments:</h2>
+<table>
+  <thead>
+   <tr>
+      <th>Patient</th>
+      <th>Date</th>
+  </tr>
+  </thead>
+  </tbody>
+  <%@doctor.appointments.each do |app|%>
+    <tr>
+      <td><%=link_to app.patient.name, app.patient%></td>
+      <td><%=app.appointment_datetime.strftime("%B %d, %Y at %H:%M")%></td>
+    </tr>
+  <%end%>
+  </tbody>
+</table>
